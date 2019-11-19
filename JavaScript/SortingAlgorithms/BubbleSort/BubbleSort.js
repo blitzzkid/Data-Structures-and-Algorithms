@@ -3,9 +3,7 @@ const bubbleSort = array => {
     let swappedAtLeastOnce = false;
     for (let j = 0; j < array.length - i; j++) {
       if (array[j] > array[j + 1]) {
-        const temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
+        swap(array, j, j + 1);
         swappedAtLeastOnce = true;
       }
     }
@@ -17,9 +15,9 @@ const bubbleSort = array => {
 };
 
 const swap = (array, firstElement, secondElement) => {
-  const temp = firstElement;
-  firstElement = secondElement;
-  secondElement = temp;
+  const temp = array[firstElement];
+  array[firstElement] = array[secondElement];
+  array[secondElement] = temp;
 };
 
 module.exports = bubbleSort;

@@ -9,7 +9,7 @@ describe("LinkedList", () => {
       const node = new Node("apple");
       expect(node instanceof Node).toBeTruthy();
     });
-    
+
     it("can create a node if next is a node", () => {
       const nodeA = new Node("apple");
       const nodeB = new Node("banana", nodeA);

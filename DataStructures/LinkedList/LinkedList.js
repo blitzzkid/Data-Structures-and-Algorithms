@@ -1,10 +1,10 @@
 class Node {
-  constructor(data, next) {
-    if (next && !(next instanceof Node)) {
+  constructor(value, node = null) {
+    if (node && !(node instanceof Node)) {
       throw new Error("not a node");
     } else {
-      this.data = data;
-      this.next = next;
+      this.value = value;
+      this.next = node;
     }
   }
 }

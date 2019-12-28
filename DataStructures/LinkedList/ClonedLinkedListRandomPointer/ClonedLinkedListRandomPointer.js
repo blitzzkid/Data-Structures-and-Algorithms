@@ -31,3 +31,5 @@ const cloneLinkedList = originalHead => {
 
   return duplicateHead;
 };
+
+module.exports = cloneLinkedList;
